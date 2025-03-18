@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "times", sans-serif;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-color: rgb(32, 87, 129)
+}
+
+.main-container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* button */
+.btn {
+    padding: 1rem 1.5rem;
+    background: rgb(56, 69, 56);
+    border: 1.5px solid rgb(3, 3, 3);
+    cursor: pointer;
+}
+
+/* title */
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 6rem 0;
+    color: rgb(163, 174, 166);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font: size 1rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+  
+
+
+/* logo dan navbar menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    transition: 0.2s ease-in-out;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;  
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.logo a {
+    color: rgb(56, 69, 56);
+}
+
+nav ul li a {
+    color: rgb(92, 108, 89);
+}
+
+/* home section */
+#home {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+  
+}
+
+.home-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+    color: rgb(56, 69, 56);
+    letter-spacing: 3px; 
+    color: #333;
+
+  
+}
+
+.home-right img {
+    width: 75%;
+    border-radius: 0.5rem;
+    height: auto;
+
+}
+
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding-left: 3rem;
+    padding-bottom: 5rem;
+}
+
+/* Responsivitas */
+@media (max-width: 1100px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #home {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .home-right img {
+        width: 60%;
+    }
+
+    .home-name {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .home-name {
+        font-size: 2rem;
+    }
+
+    .home-right img {
+        width: 80%;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* About Section */
+#about {
+    background-color: #d7d0d0;
+    padding: 5rem 0;   
+}
+
+.section-title-about {
+    text-align: center; 
+    margin: 1rem 0 4rem;
+}
+
+.about-icon img {
+    width: 65px; /* Ganti dengan ukuran yang diinginkan */
+    height: auto; /* Memastikan proporsi gambar tetap terjaga */
+    display: block; /* Menghapus ruang di bawah gambar */
+    margin: 0 auto; /* Memusatkan gambar dalam kontainer */
+}
+
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #000000;
+    border-radius: 0.7rem;
+}
+
+
+.about h4 {
+    color: #F6F8D5;
+    margin: 0.5rem 0;
+}
+
+.about p {
+    color: #F6F8D5
+}
+
+.about-icon {
+    background-color:  rgb(255, 255, 255);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+}
+/* end of .about */
+
+
+/*----- BAGIAN SKILLS -----*/
+
+.skills {
+    padding: 60px 15%;
+    background-color: #ffffff;
+    box-shadow: #716868
+}
+
+.section-heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h2 {
+    color: #000000;
+    font-size: 2rem;
+}
+
+.single-skill-content {
+    margin-bottom: 30px;
+}
+
+.barWrapper {
+    margin-bottom: 20px;
+}
+
+.progressText {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.single-progress-txt {
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    flex-grow: 1;
+    background-color: #a68d8d;
+    height: 30px;
+    position: relative;
+    margin-right: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    transition: width 0.4s ease;
+}
+
+/* Warna untuk masing-masing skill dan sesuai persentase */
+.progress-bar.html {
+    background-color: #716868;
+    width: 100%;
+}
+
+.progress-bar.css {
+    background-color: #716868;
+    width: 98%;
+}
+
+.progress-bar.js {
+    background-color: #716868;
+    width: 96%;
+}
+
+
+h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .skills {
+        padding: 30px 10%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+
+
+/*---- CONTACT----*/
+.contact {
+    padding: 60px 15%; /* Sesuaikan padding horizontal di sini */
+    background-color: #DDDED8;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #568550;
+    color: #fcfbfb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #909491;
+}
+
+
+/* footer */
+footer {
+    margin-bottom: 0;
+    padding: 4rem 0;
+    background: rgb(143, 153, 146);
+    text-align: center; /* Meratakan teks di tengah */
+}
+
+.footer-container {
+    display: flex;                
+    flex-direction: column;       
+    align-items: center;          
+}
+
+.footer-icons {
+    display: flex;                
+    justify-content: center;       
+    gap: 10px;                    
+    margin-bottom: 1rem;          
+}
+
+.footer-icons a img {
+    width: 24px;    /* Ukuran ikon */
+    height: 24px;
+}
+
+footer p {
+    font-size: 0.9rem;  
+    color: #333;         
+    margin: 0;           
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
